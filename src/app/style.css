@@ -1,0 +1,18 @@
+body {
+    background: #f1f1f1 !important;
+}
+.avatar-size {
+    width: 45px;
+    height: 45px;
+}
+
+.title{
+    margin-left: 16px;
+}
+.navbar-width {
+    background-color: #fff;
+    font: -webkit-control;
+}
+.icons{
+    padding: 4px;
+}
