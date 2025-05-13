@@ -1,9 +1,12 @@
 {
+  "homepage": "https://jawahar1995.github.io/Polymath",
   "name": "shadcn_react",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
@@ -20,6 +23,7 @@
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "edge-js": "^24.0.1",
+    "gh-pages": "^6.3.0",
     "lucide-react": "^0.509.0",
     "next": "15.3.2",
     "node-edge": "^1.5.8",
