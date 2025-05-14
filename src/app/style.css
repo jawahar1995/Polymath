@@ -18,3 +18,12 @@ body {
 .icons{
     padding: 4px;
 }
+
+.custom-bullet li::marker {
+  color: #d7dad9; /* Tailwind emerald-500 */
+}
+
+.custom-bullet {
+  position: relative;
+  right: -18px;
+}
