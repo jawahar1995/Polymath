@@ -2,7 +2,7 @@
 import { useState } from "react";
 import Navbar from "./navbar/navbar";
 import Viewport from "./reactflow/viewport";
-import { DrawerDemo } from "./reactflow/drawer";
+// import { DrawerDemo } from "./reactflow/drawer";
 import "./style.css";
 
 export default function Home() {
@@ -36,7 +36,6 @@ export default function Home() {
       {/* Main Content */}
       <div className="min-h-screen col-span-1 md:col-span-4 p-4">
         <Viewport />
-        <DrawerDemo />
       </div>
     </div>
   );

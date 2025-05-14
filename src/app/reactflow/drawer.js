@@ -18,14 +18,14 @@ export function DrawerDemo() {
         <DrawerTrigger>Open</DrawerTrigger>
         <DrawerContent>
             <DrawerHeader>
-              <DrawerTitle>Second Page</DrawerTitle>
-              <DrawerDescription></DrawerDescription>
+            <DrawerTitle>Are you absolutely sure?</DrawerTitle>
+            <DrawerDescription>This action cannot be undone.</DrawerDescription>
             </DrawerHeader>
             <DrawerFooter>
-               <DrawerClose>
-                  <Button className="" variant="outline">Cancel</Button>
-              </DrawerClose>
-              <Button>Submit</Button>
+            <Button>Submit</Button>
+            <DrawerClose>
+                <Button variant="outline">Cancel</Button>
+            </DrawerClose>
             </DrawerFooter>
         </DrawerContent>
     </Drawer>
