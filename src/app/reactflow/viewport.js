@@ -1,14 +1,11 @@
 'use client';
 
 import { Button } from "@/components/ui/button"
-//import React from 'react';
 import React, { useState, useCallback } from 'react';
-import { ReactFlow, Background, Controls, ReactFlowProvider } from '@xyflow/react';
+import { ReactFlow, Background, Controls, ReactFlowProvider,useNodesState,useEdgesState,addEdge } from '@xyflow/react';
 import '@xyflow/react/dist/style.css';
 import { initialNodes } from './nodes';
 import { initialEdges } from './edges';
-//import ReactFlow, { Background, Controls } from 'reactflow';
-//import 'reactflow/dist/style.css';
 import {
   Drawer,
   DrawerContent,
@@ -28,13 +25,25 @@ function Viewport() {
 
   const closeDrawer = () => setSelectedNode(null);
 
+  const [nodes, setNodes, onNodesChange] = useNodesState(initialNodes);
+  const [edges, setEdges, onEdgesChange] = useEdgesState(initialEdges);
+
+  const onConnect = useCallback((params) => setEdges((eds) => addEdge(params, eds)), [setEdges]);
+
+  // const onNodeDrag = (event, node) => {
+  //   console.log('Node clicked:', node);
+  // };
+
   return (
     <ReactFlowProvider>
       <div style={{ height: '100%' }}>
-        <ReactFlow nodes={initialNodes} edges={initialEdges} onNodeClick={onNodeClick} fitView>
+        <ReactFlow nodes={nodes} edges={edges}
+          onNodesChange={onNodesChange} onEdgesChange={onEdgesChange}
+          onNodeClick={onNodeClick} onConnect={onConnect} panOnDrag={true}
+          selectionOnDrag fitView>
           <Background />
           <Controls />
-        </ReactFlow>
+        </ReactFlow>        
         <Drawer direction="right" open={!!selectedNode} onOpenChange={val => !val && closeDrawer()}>
           <DrawerContent>
             <DrawerHeader>
