@@ -64,3 +64,17 @@ body {
     position: relative;
     top: -4px;
 }
+
+div#radix-«ri» {
+    width: auto !important;
+}
+
+.flex-btn {
+    display: flex;
+}
+
+.pro-label {
+    position: relative;
+    top: -3px;
+    right: -4px;
+}

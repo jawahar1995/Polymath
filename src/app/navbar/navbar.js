@@ -11,12 +11,15 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 
-import {
-  Collapsible,
-  CollapsibleContent,
-  CollapsibleTrigger,
-} from "@/components/ui/collapsible"
 import { ChevronsUpDown } from "lucide-react";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu"
 
 
 function navbar() {
@@ -25,6 +28,7 @@ function navbar() {
     const toggleSidebar = () => {
         setIsOpen(prev => !prev);
     };
+
     return (
         <main className="flex flex-col">
             <div className="toggle-btn h-9 w-9 curson-pointer" onClick={toggleSidebar}>
@@ -35,15 +39,6 @@ function navbar() {
             isOpen ? "w-64 opacity-100" : "w-0 opacity-0 overflow-hidden"
             }`}>
                 <NavigationMenuList className="block">
-                    {/* <Collapsible>
-                        <CollapsibleTrigger>Can I use this in my project?</CollapsibleTrigger>
-                        <CollapsibleTrigger asChild></CollapsibleTrigger>
-                        <CollapsibleContent>
-                            Yes. Free to use for personal and commercial projects. No attribution
-                            required.
-                        </CollapsibleContent>
-                    </Collapsible> */}
-
                     <div className="flex m-2 p-2 pro-font">
                         <Avatar className="rounded-md avatar-size">
                             <AvatarFallback>CN</AvatarFallback>
@@ -53,10 +48,66 @@ function navbar() {
                             <p>m@example.com</p>
                         </div>
                         <div className="proSupMenu">
-                            <Button variant="ghost" size="sm">
+                            {/* <Button variant="ghost" size="sm">
                                 <ChevronsUpDown className="h-4 w-4" />
                                 <span className="sr-only">Toggle</span>
-                            </Button>
+                            </Button> */}
+                            <DropdownMenu>
+                                <DropdownMenuTrigger>
+                                    <Button variant="ghost" size="sm">
+                                        <ChevronsUpDown className="h-4 w-4" />
+                                        <span className="sr-only">Toggle</span>
+                                    </Button>
+                                </DropdownMenuTrigger>
+                                <DropdownMenuContent side="right">
+                                    <DropdownMenuLabel>
+                                        <div className="flex m-2 pro-font">
+                                            <Avatar className="rounded-md avatar-size">
+                                                <AvatarFallback>CN</AvatarFallback>
+                                            </Avatar>
+                                            <div className="block p-2 pro-name">
+                                                <b>Shadcn</b>
+                                                <p>m@example.com</p>
+                                            </div>
+                                        </div>
+                                    </DropdownMenuLabel>
+                                    <DropdownMenuSeparator />
+                                    <DropdownMenuItem>
+                                        <button className="flex-btn cursor-pointer">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="lucide lucide-sparkles"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"></path><path d="M20 3v4"></path><path d="M22 5h-4"></path><path d="M4 17v2"></path><path d="M5 18H3"></path></svg>
+                                            <span className="pro-label">Upgrade to Pro</span>
+                                        </button>
+                                    </DropdownMenuItem>
+                                    <DropdownMenuSeparator />
+                                    <DropdownMenuItem>
+                                        <button className="flex-btn cursor-pointer">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-badge-check"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"></path><path d="m9 12 2 2 4-4"></path></svg>
+                                            <span className="pro-label">Account</span>
+                                        </button>
+                                    </DropdownMenuItem>
+                                    <DropdownMenuSeparator />
+                                    <DropdownMenuItem>
+                                        <button className="flex-btn cursor-pointer">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-credit-card"><rect width="20" height="14" x="2" y="5" rx="2"></rect><line x1="2" x2="22" y1="10" y2="10"></line></svg>
+                                            <span className="pro-label">Billing</span>
+                                        </button>
+                                    </DropdownMenuItem>
+                                    <DropdownMenuSeparator />
+                                    <DropdownMenuItem>
+                                        <button className="flex-btn cursor-pointer">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-bell"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"></path><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"></path></svg>
+                                            <span className="pro-label">Notification</span>
+                                        </button>
+                                    </DropdownMenuItem>
+                                    <DropdownMenuSeparator />
+                                    <DropdownMenuItem>
+                                        <button className="flex-btn cursor-pointer">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-log-out"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" x2="9" y1="12" y2="12"></line></svg>
+                                            <span className="pro-label">Log out</span>
+                                        </button>
+                                    </DropdownMenuItem>
+                                </DropdownMenuContent>
+                            </DropdownMenu>
                         </div>
                     </div>
                     <NavigationMenuItem className="gap3">
@@ -130,12 +181,17 @@ function navbar() {
                             <NavigationMenuTrigger>
                                 <TooltipProvider>
                                     <Tooltip>
-                                        <TooltipTrigger className="text-1xl w-50">
+                                        <TooltipTrigger className="flex text-1xl w-50">
                                             <span className="truncate block w-full text-left">🏠 Personal Life Management</span>
                                         </TooltipTrigger>
                                         <TooltipContent>
                                             <p>Personal Life Management</p>
                                         </TooltipContent>
+                                        <button className="hidden group-hover:block cursor-pointer">
+                                            <span className="text-[17px]">
+                                                +
+                                            </span>
+                                        </button>
                                     </Tooltip>
                                 </TooltipProvider>
                             </NavigationMenuTrigger>
@@ -147,12 +203,17 @@ function navbar() {
                             <NavigationMenuTrigger>
                                 <TooltipProvider>
                                     <Tooltip>
-                                        <TooltipTrigger className="text-1xl w-50">
+                                        <TooltipTrigger className="flex text-1xl w-50">
                                             <span className="truncate block w-full text-left">💼 Professional Development</span>
                                         </TooltipTrigger>
                                         <TooltipContent>
                                             <p>Professional Development</p>
                                         </TooltipContent>
+                                        <button className="hidden group-hover:block cursor-pointer">
+                                            <span className="text-[17px]">
+                                                +
+                                            </span>
+                                        </button>
                                     </Tooltip>
                                 </TooltipProvider>
                             </NavigationMenuTrigger>
@@ -164,12 +225,17 @@ function navbar() {
                             <NavigationMenuTrigger>
                                 <TooltipProvider>
                                     <Tooltip>
-                                        <TooltipTrigger className="text-1xl w-50">
+                                        <TooltipTrigger className="flex text-1xl w-50">
                                             <span className="truncate block w-full text-left">🎨 Creative Project</span>
                                         </TooltipTrigger>
                                         <TooltipContent>
                                             <p>Creative Project</p>
                                         </TooltipContent>
+                                        <button className="hidden group-hover:block cursor-pointer">
+                                            <span className="text-[17px]">
+                                                +
+                                            </span>
+                                        </button>
                                     </Tooltip>
                                 </TooltipProvider>
                             </NavigationMenuTrigger>
