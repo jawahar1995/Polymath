@@ -11,9 +11,13 @@ body {
 }
 .navbar-width {
     background-color: #fff;
-    font: -webkit-control;
-    width: 318px !important;
+    /* font: -webkit-control; */
+    font-size: 14px;
+    font-family: sans-serif;
+    font-weight: 400;
     z-index: 1;
+    padding-left: 8px;
+    border: 1px solid #eeeeee;
 }
 .icons{
     padding: 4px;
@@ -26,4 +30,32 @@ body {
 .custom-bullet {
   position: relative;
   right: -18px;
+}
+
+/* .nav-ellipsis {
+    width: 245px;
+} */
+
+.pro-font {
+    font-size: 13px;
+}
+
+.toggle-btn {
+    position: absolute;
+    z-index: 2;
+    left: 17rem;
+    top: 1rem;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+  .toggle-btn  {
+    display: none;
+  }
+}
+
+.proSupMenu {
+    align-content: space-evenly;
+    position: relative;
+    right: -20px;
 }

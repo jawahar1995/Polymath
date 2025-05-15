@@ -21,13 +21,13 @@ import {
   DrawerTitle,
   DrawerDescription,
   DrawerClose,
+  DrawerTrigger,
   DrawerFooter,
 } from "@/components/ui/drawer";
 import { Badge } from "@/components/ui/badge";
 import { Label } from "@/components/ui/label";
 import "../../app/style.css";
 import { Maximize2, Minimize2 } from "lucide-react"
-
 
 function Viewport() {
   const [selectedNode, setSelectedNode] = useState(null);
@@ -68,12 +68,13 @@ function Viewport() {
           <Background />
           <Controls />
         </ReactFlow>
-        <Drawer className="w-96"
+        <Drawer className="w-full"
           direction="right"
           open={!!selectedNode}
           onOpenChange={(val) => !val && closeDrawer()}
         >
-          <DrawerContent className={isExpanded ? "w-screen max-w-full" : "max-w-2xl mx-auto"}>
+        {/* <DrawerTrigger id="drawer-trigger" aria-controls="my-drawer">Open</DrawerTrigger> */}
+          <DrawerContent>
             <DrawerHeader>
               <div className="flex justify-between pb-0">
                 <div className="flex gap-2">
