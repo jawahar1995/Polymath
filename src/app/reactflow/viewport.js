@@ -231,7 +231,7 @@ function Viewport() {
             </DrawerHeader>
             <br />
             <hr />
-            <div className="h-96 overflow-y-auto overflow-x-hidden">
+            <div className="overflow-y-auto overflow-x-hidden">
               <div>
                 <h2 className="text-2xl font-bold pl-4"> Hi there,</h2>
                 <br />

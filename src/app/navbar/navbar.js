@@ -48,7 +48,7 @@ function navbar() {
                         <Avatar className="rounded-md avatar-size">
                             <AvatarFallback>CN</AvatarFallback>
                         </Avatar>
-                        <div className="block p-2">
+                        <div className="block p-2 pro-name">
                             <b>Shadcn</b>
                             <p>m@example.com</p>
                         </div>
