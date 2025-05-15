@@ -150,6 +150,42 @@ function navbar() {
                                         <TooltipContent>
                                             <p>Project Management & Task Tracking</p>
                                         </TooltipContent>
+                                        <DropdownMenu>
+                                            <DropdownMenuTrigger>
+                                                <Button className="hidden group-hover:block cursor-pointer" variant="ghost" size="sm">
+                                                    <span className="font-semibold text-[17px]">
+                                                        ...
+                                                    </span>
+                                                </Button>
+                                            </DropdownMenuTrigger>
+                                            <DropdownMenuContent side="right">
+                                                <DropdownMenuItem>
+                                                    <button className="flex-btn cursor-pointer">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star-off text-muted-foreground"><path d="M8.34 8.34 2 9.27l5 4.87L5.82 21 12 17.77 18.18 21l-.59-3.43"></path><path d="M18.42 12.76 22 9.27l-6.91-1L12 2l-1.44 2.91"></path><line x1="2" x2="22" y1="2" y2="22"></line></svg>                                                        <span className="pro-label">Remove from Favorites</span>
+                                                    </button>
+                                                </DropdownMenuItem>
+                                                <DropdownMenuSeparator />
+                                                <DropdownMenuItem>
+                                                    <button className="flex-btn cursor-pointer">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-link text-muted-foreground"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>                                                        <span className="pro-label">Copy Link</span>
+                                                    </button>
+                                                </DropdownMenuItem>
+                                                <DropdownMenuSeparator />
+                                                <DropdownMenuItem>
+                                                    <button className="flex-btn cursor-pointer">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-up-right text-muted-foreground"><path d="M7 7h10v10"></path><path d="M7 17 17 7"></path></svg>
+                                                        <span className="pro-label">Open in New Tab</span>
+                                                    </button>
+                                                </DropdownMenuItem>
+                                                <DropdownMenuSeparator />
+                                                <DropdownMenuItem>
+                                                    <button className="flex-btn cursor-pointer">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-trash2 text-muted-foreground"><path d="M3 6h18"></path><path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"></path><path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"></path><line x1="10" x2="10" y1="11" y2="17"></line><line x1="14" x2="14" y1="11" y2="17"></line></svg>
+                                                        <span className="pro-label">Delete</span>
+                                                    </button>
+                                                </DropdownMenuItem>
+                                            </DropdownMenuContent>
+                                        </DropdownMenu>
                                     </Tooltip>
                                 </TooltipProvider>
                             </NavigationMenuTrigger>
@@ -168,6 +204,42 @@ function navbar() {
                                         <TooltipContent>
                                             <p>Family Recipe Collections & Meal Planning</p>
                                         </TooltipContent>
+                                        <DropdownMenu>
+                                            <DropdownMenuTrigger>
+                                                <Button className="hidden group-hover:block cursor-pointer" variant="ghost" size="sm">
+                                                    <span className="font-semibold text-[17px]">
+                                                        ...
+                                                    </span>
+                                                </Button>
+                                            </DropdownMenuTrigger>
+                                            <DropdownMenuContent side="right">
+                                                <DropdownMenuItem>
+                                                    <button className="flex-btn cursor-pointer">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star-off text-muted-foreground"><path d="M8.34 8.34 2 9.27l5 4.87L5.82 21 12 17.77 18.18 21l-.59-3.43"></path><path d="M18.42 12.76 22 9.27l-6.91-1L12 2l-1.44 2.91"></path><line x1="2" x2="22" y1="2" y2="22"></line></svg>                                                        <span className="pro-label">Remove from Favorites</span>
+                                                    </button>
+                                                </DropdownMenuItem>
+                                                <DropdownMenuSeparator />
+                                                <DropdownMenuItem>
+                                                    <button className="flex-btn cursor-pointer">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-link text-muted-foreground"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>                                                        <span className="pro-label">Copy Link</span>
+                                                    </button>
+                                                </DropdownMenuItem>
+                                                <DropdownMenuSeparator />
+                                                <DropdownMenuItem>
+                                                    <button className="flex-btn cursor-pointer">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-up-right text-muted-foreground"><path d="M7 7h10v10"></path><path d="M7 17 17 7"></path></svg>
+                                                        <span className="pro-label">Open in New Tab</span>
+                                                    </button>
+                                                </DropdownMenuItem>
+                                                <DropdownMenuSeparator />
+                                                <DropdownMenuItem>
+                                                    <button className="flex-btn cursor-pointer">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-trash2 text-muted-foreground"><path d="M3 6h18"></path><path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"></path><path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"></path><line x1="10" x2="10" y1="11" y2="17"></line><line x1="14" x2="14" y1="11" y2="17"></line></svg>
+                                                        <span className="pro-label">Delete</span>
+                                                    </button>
+                                                </DropdownMenuItem>
+                                            </DropdownMenuContent>
+                                        </DropdownMenu>
                                     </Tooltip>
                                 </TooltipProvider>
                             </NavigationMenuTrigger>
